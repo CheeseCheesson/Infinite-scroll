@@ -8,7 +8,6 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [fetching, setFetching] = useState(true)
   const [totalCount, setTotalCount] = useState(0)
-  // `https://jsonplaceholder.typicode.com/photos?_limit=20&_page=${currentPage}`
 
   useEffect(() => {
     if (fetching) {
@@ -50,10 +49,17 @@ const App = () => {
           <>
             <a target="blank" href={i.owner['html_url']}><div className="title">
               {i.owner['login']}
-
             </div>
-                        </a>
-            <div>{i.stargazers_count}</div>
+            </a>
+            <div className="star">
+              <svg class="svg-star" width="100" height="200" viewBox="0 0 84 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42 0L51.8786 25.5664H83.8465L57.9839 41.3673L67.8625 66.9336L42 51.1327L16.1374 66.9336L26.0161 41.3673L0.153515 25.5664H32.1214L42 0Z" fill="yellow" />
+              </svg>
+              <div className="text">
+                 {i.stargazers_count}
+              </div>
+             
+            </div>
             <div className="image">
               <a target="blank" href={i.owner['html_url']}>
                 <img src={i.owner['avatar_url']} alt={i.owner['login']} />

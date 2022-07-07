@@ -4,6 +4,9 @@
   box-sizing: border-box;
 
 }
+body{
+  overflow-x: hidden;
+}
 .grid-container{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 2fr;
@@ -19,12 +22,13 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: #689AD3;
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 .card:first-child {
   grid-column: span 4;
   grid-row: span 2;
-  background-color: #FFEE73;
+  background-color: #7394ff;
+  justify-content: space-around;
 }
 .card:nth-child(even) {
   grid-column: span 2;
@@ -33,7 +37,6 @@
 .title{
   font-size: 24px;
   font-weight: bold;
-  padding-right: 20px;
 }
 .image img {
   max-width: 300px;
@@ -44,6 +47,30 @@ a {
   color: #000;
   text-transform: uppercase;
 }
-span{
-  padding-right: 20px;
+.star{
+  margin-right: 15px;
+  display: inline-grid;
+  grid-template-columns: 85px;
+  grid-template-rows: 50px;
+  font-size: 16px;
+}
+.text{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin-top: 87px;
+  margin-left: 22px;
+  font-weight: 700;
+}
+.svg-star{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  stroke: rgb(226, 61, 105);
+  stroke-width: 2px;
+  stroke-dashoffset: 700;
+  stroke-dasharray: 700;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.star:hover .svg-star {
+  stroke-dashoffset: 0;
 }
