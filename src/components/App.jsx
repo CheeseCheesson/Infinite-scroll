@@ -52,7 +52,7 @@ const App = () => {
             </div>
             </a>
             <div className="star">
-              <svg class="svg-star" width="100" height="200" viewBox="0 0 84 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="svg-star" width="100" height="100" viewBox="0 0 84 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M42 0L51.8786 25.5664H83.8465L57.9839 41.3673L67.8625 66.9336L42 51.1327L16.1374 66.9336L26.0161 41.3673L0.153515 25.5664H32.1214L42 0Z" fill="yellow" />
               </svg>
               <div className="text">
